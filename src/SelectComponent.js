@@ -24,7 +24,7 @@ class SelectComponent extends React.Component {
     }
     onChange = (e) => {
         let lists = this.props.list.filter(item => {
-            return item.title.indexOf(e.target.value) > -1;
+            return item.title.toLowerCase().indexOf(e.target.value.toLowerCase()) > -1;
         });
         this.setState({list: lists});
     }
